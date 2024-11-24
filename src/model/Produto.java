@@ -5,6 +5,7 @@ package model;
 public class Produto {
     
     private int id;
+    private int teste;
     private String nome;
     private int codigo;
     private int quantidade;

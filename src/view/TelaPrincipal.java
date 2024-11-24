@@ -144,7 +144,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
         jMenuItem5.setBackground(new java.awt.Color(204, 204, 204));
         jMenuItem5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jMenuItem5.setText("Fechar caixa");
+        jMenuItem5.setText("Listar Movimentos");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
@@ -221,6 +221,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
+        new AbrirCaixa().setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void formAncestorMoved(java.awt.event.HierarchyEvent evt) {//GEN-FIRST:event_formAncestorMoved

@@ -80,7 +80,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel2.setText("Versão 2024");
 
         jLabel3.setFont(new java.awt.Font("Lucida Bright", 1, 10)); // NOI18N
-        jLabel3.setText("00:00:00");
 
         jLabel4.setFont(new java.awt.Font("Lucida Bright", 1, 10)); // NOI18N
         jLabel4.setText("build - 1.0");
@@ -92,7 +91,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(590, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(465, 465, 465))
+                .addContainerGap(465, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jLabel2)
@@ -121,6 +120,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBar1.setBorderPainted(false);
         jMenuBar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jMenuBar1.setMinimumSize(new java.awt.Dimension(132, 50));
+        jMenuBar1.setPreferredSize(new java.awt.Dimension(132, 40));
         jMenuBar1.setRequestFocusEnabled(false);
 
         jMenu2.setBorder(null);
@@ -132,7 +133,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuItem4.setBackground(new java.awt.Color(204, 204, 204));
         jMenuItem4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jMenuItem4.setText("Abrir caixa");
+        jMenuItem4.setAutoscrolls(true);
+        jMenuItem4.setBorderPainted(false);
         jMenuItem4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jMenuItem4.setIconTextGap(1);
         jMenuItem4.setInheritsPopupMenu(true);
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,11 +144,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenu2.add(jMenuItem4);
+        jMenuItem4.getAccessibleContext().setAccessibleDescription("");
 
         jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
         jMenuItem5.setBackground(new java.awt.Color(204, 204, 204));
         jMenuItem5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jMenuItem5.setText("Listar Movimentos");
+        jMenuItem5.setIconTextGap(1);
+        jMenuItem5.setInheritsPopupMenu(true);
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
@@ -161,6 +168,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuItem2.setBackground(new java.awt.Color(204, 204, 204));
         jMenuItem2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jMenuItem2.setText("Cadastrar");
+        jMenuItem2.setIconTextGap(1);
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -172,6 +180,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuItem3.setBackground(new java.awt.Color(204, 204, 204));
         jMenuItem3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jMenuItem3.setText("Listar");
+        jMenuItem3.setIconTextGap(1);
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);

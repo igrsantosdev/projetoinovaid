@@ -207,15 +207,12 @@ public class MainApp extends javax.swing.JFrame {
         } else { 
         String mensagem = "Senha ou Email incorreto!";
         
-        // Criando um painel personalizado
         JPanel painel = new JPanel();
         JLabel label = new JLabel(mensagem);
-        label.setForeground(Color.BLACK); // Cor do texto
-        label.setFont(new Font("Arial", Font.BOLD, 14)); // Fonte personalizada
+        label.setForeground(Color.BLACK);
+        label.setFont(new Font("Arial", Font.BOLD, 14));
 
-        // Adicionando o label ao painel
         painel.add(label);
-        // JOptionPane.showMessageDialog(null, "Senha ou Email incorreto!");
         JOptionPane.showMessageDialog(null, painel, "Erro!", JOptionPane.ERROR_MESSAGE);
         }  
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -496,6 +496,9 @@
                 <Property name="text" type="java.lang.String" value="CANCELAR"/>
                 <Property name="hideActionText" type="boolean" value="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -537,7 +540,7 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jSeparator4" min="-2" pref="10" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="348" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

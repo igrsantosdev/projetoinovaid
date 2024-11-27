@@ -31,5 +31,5 @@ public class ProdutoDAO {
             ConnectionFactory.closeConnection(con, stmt);
         }
     
-    }
+    } 
 }

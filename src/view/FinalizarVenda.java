@@ -4,20 +4,45 @@
  */
 package view;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import javax.swing.AbstractAction;
+import javax.swing.JComponent;
+import javax.swing.KeyStroke;
+
+
 /**
  *
  * @author IGORSANTOS
  */
-public class Venda extends javax.swing.JFrame {
+public class FinalizarVenda extends javax.swing.JFrame {
 
     /**
      * Creates new form Venda
      */
-    public Venda() {
+    public FinalizarVenda() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        configurarTeclaESC();
     }
-
+    
+        // METODO CONFIGURAR A TECLA PARA ABRIR A JANELA VIEW VENDA
+    private void configurarTeclaESC() {
+        getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
+            KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), "fecharvenda");
+        getRootPane().getActionMap().put("fecharvenda", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fecharjanelavenda(e);
+            }
+        });
+    }
+    
+    // METODO ABRIR JANELA VIEW VENDA
+    private void fecharjanelavenda(ActionEvent evt) {
+        this.dispose();
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -183,6 +208,11 @@ public class Venda extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jButton3.setText("CANCELAR");
         jButton3.setHideActionText(true);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -329,7 +359,7 @@ public class Venda extends javax.swing.JFrame {
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(348, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -387,6 +417,11 @@ public class Venda extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -404,20 +439,21 @@ public class Venda extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Venda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FinalizarVenda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Venda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FinalizarVenda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Venda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FinalizarVenda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Venda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FinalizarVenda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Venda().setVisible(true);
+                new FinalizarVenda().setVisible(true);
             }
         });
     }
